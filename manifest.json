@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Color Picker",
+    "short_name": "Color Picker",
+    "description": "Selecione uma cor do site atual",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "page": "background/background.html",
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "Color Picker",
+        "default_popup": "popup/index.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}
